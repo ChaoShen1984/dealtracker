@@ -1,7 +1,7 @@
 # dealtracker
 
 The project searches several different web sites gives the all the available deals. 
-Purpose: Learn spring MVC (Thymeleaf), basic git commands, and web sraper.  
+Purpose: Learn spring MVC (Thymeleaf), basic git commands, web sraper and Openshift.  
 
 Future enhancement ideas: 
 1. Sort
