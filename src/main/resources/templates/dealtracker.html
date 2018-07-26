@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form action="/dealtracker" id="searchForm">
+		Search keywords: <input type="text" name="searchWords" th:value=${searchWords}>
+		Page: <input type="text" name="pageNumber" th:value=${pageNumber}> <input
+			type="submit" value="OK">
+	</form>
+	<p>Note: the result is sorted by the web sites' default sort order. Each page is sorted by price.</p>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Title</th>
+			<th>Price</th>
+			<th>URL</th>
+		</tr>
+		<tr th:each="item,iterationStatus  : ${items}">
+			<td th:text="${iterationStatus.count}">1</td>
+			<td th:text="${item.title}">Title</td>
+			<td th:text="${item.price}">Price</td>
+			<td><a th:href="@{${item.url}}" th:text="${item.url}">URL</a></td>
+		</tr>
+	</table>
+	<form action="/dealtracker" id="searchForm">
+		Search keywords: <input type="text" name="searchWords" th:value=${searchWords}>
+		Page: <input type="text" name="pageNumber" th:value=${pageNumber}> <input
+			type="submit" value="OK">
+	</form>
+</body>
+</html>
